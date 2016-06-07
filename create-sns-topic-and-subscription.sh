@@ -32,12 +32,12 @@ shift $((OPTIND-1))
 
 if [ -n $topicName -a -n $email ]; then
 	topicArn=$(aws sns create-topic --name $topicName --query 'TopicArn' --output text);
-	
+
 	if [ -n $topicArn ]; then
 		echo "Topic: "$topicArn " created";
 		aws sns subscribe --topic-arn $topicArn --protocol email --notification-endpoint $email
 	fi
-	
+
 else
 	usage
 fi

@@ -10,11 +10,11 @@ while getopts ":t:" opt; do
 
 		#install prereqs
 		echo "Installing prerequisites"
-		cd cloudWatchScript
 		./install-awscli.sh
 		./install-perl.sh
 
 	  echo "Starting CloudWatch"
+          cd cloudWatchScript
 	  ./start-cloudwatch.sh -t $OPTARG
       ;;
     \?)
@@ -29,7 +29,3 @@ while getopts ":t:" opt; do
       ;;
   esac
 done
-
-if [ -n $OPTARG ]; then
-  usage
-fi

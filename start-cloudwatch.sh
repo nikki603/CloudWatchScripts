@@ -145,7 +145,3 @@ while getopts ":t:" opt; do
       ;;
   esac
 done
-
-if [ -n $OPTARG ]; then
-  usage
-fi
