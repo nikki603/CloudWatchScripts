@@ -7,14 +7,6 @@ while getopts ":t:" opt; do
   case $opt in
     t)
       echo "Amazon SNS Topic ARN: $OPTARG" >&2
-	  #download scripts
-	  curl "https://github.com/nikki603/CloudWatchScripts/blob/master/cloudWatchScript.zip" -o "cloudWatchScript.zip"
-	  sudo apt-get install unzip
-	  unzip cloudWatchScript.zip
-
-	  # set permissions
-		echo "Setting permissions"
-		chmod 755 cloudWatchScript/*.sh
 
 		#install prereqs
 		echo "Installing prerequisites"

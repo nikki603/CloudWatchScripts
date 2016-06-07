@@ -1,4 +1,3 @@
-#!/bin/bash
 # Assumes using AMI image 'ubuntu-with-cloudwatch-scripts'
 # AWS CLI and PERL already installed. Scripts in cloudWatchScript folder.
 # chmod 755 complete on script files to execute.
